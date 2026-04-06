@@ -3,6 +3,10 @@ s<!DOCTYPE html>
 <head>
 <style>
 
+
+
+
+
 .topbar{
   display:flex;
   justify-content:space-between;
@@ -525,6 +529,28 @@ min-width: 140px;
     font-size: 14px;
     padding: 6px 0;
 }
+
+
+/* DÁN CSS bạn copy vào đây */
+
+@media (max-width: 768px) {
+    .hero-banner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #bannerTitle {
+        font-size: 28px !important;
+        text-align: center;
+    }
+
+    #bannerImg {
+        width: 90% !important;
+        margin: auto;
+    }
+}
+
 
 </style>
 
