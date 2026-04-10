@@ -45,7 +45,7 @@
   position: relative;
 }
 
-/* chữ chạy */
+/* chữ ch
 .promo-text {
   position: absolute;
   top: 10px; /* chỉnh cao thấp ở đây */
@@ -154,10 +154,17 @@
   color: #0f172a; /* xanh đậm */
 }
 
-/* Giá nổi bật hơn */
-.product .price-table td:last-child{
+/* Cột giá xe (cột thứ 2) */
+.price-table td:nth-child(2){
   color: #1e3a8a;
   font-weight: bold;
+}
+
+/* Cột khuyến mãi (cột thứ 3) */
+.price-table td:nth-child(3){
+  color: #dc2626; /* đỏ cho nổi */
+  font-weight: bold;
+font-size: 15px;
 }
 
 /* Viền bảng mờ nhẹ */
@@ -500,22 +507,119 @@ min-width: 140px;
 
   #bannerDesc {
     font-size: 15px !important;
-  }
+ }
+
+.product-item {
+  width: 50%;
 }
+
+.price-table td:last-child {
+  text-align: center !important;
+  display: table-cell !important;
+  vertical-align: middle !important;
+}
+
+.km {
+  text-align: center !important;
+  color: #dc2626 !important;
+  font-weight: bold;
+}
+.price-table td {
+  vertical-align: middle !important;
+}
+
+.price-table td {
+  padding: 10px !important;
+}
+
+.price-table td:nth-child(1) {
+  width: 50%;
+}
+
+.price-table td:nth-child(2),
+.price-table td:nth-child(3) {
+  width: 25%;
+  text-align: center;
+}
+
+
+
+
 
 
 
 </style>
 
-</head>
-
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sản phẩm - Hyundai Bình Dương</title>
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    #bannerTitle {
+      font-size: 26px !important;
+      margin-bottom: 8px !important;
+    }
 
+    #bannerDesc {
+      font-size: 15px !important;
+    }
+
+    .product-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 20px !important;
+    }
+
+    .products {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+}
+
+.product {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr !important;
+  }
+}
+.price-table td:nth-child(3) {
+  text-align: center !important;
+  color: #dc2626 !important;
+  font-weight: bold;
+}
+
+.price-table td {
+  vertical-align: middle !important;
+}
+
+.price-table td {
+  padding: 10px !important;
+}
+
+.price-table td:nth-child(1) {
+  width: 50%;
+}
+
+.price-table td:nth-child(2),
+.price-table td:nth-child(3) {
+  width: 25%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+  </style>
 </head>
+
 <body>
 
 
@@ -532,8 +636,7 @@ min-width: 140px;
            <nav class="menu">
         <a href="#san-pham">Sản phẩm</a>
         <a href="https://zalo.me/0943533613" target="_blank">Báo giá</a>
-	<a href="https://zalo.me/0943533613" target="_blank">Chương trình khuyến mãi</a>
-        <a href="https://zalo.me/0943533613" target="_blank">Liên hệ</a>
+	       <a href="https://zalo.me/0943533613" target="_blank">Liên hệ</a>
       </nav>
     </div>
   </header>
@@ -543,8 +646,8 @@ min-width: 140px;
 
   <!-- CHỮ CHẠY -->
   <div class="promo-text">
-   <marquee scrollamount="4">
-  🎉 KHUYẾN MÃI: CHỈ TRONG THÁNG 4/2026 GIẢM GIÁ LÊN ĐẾN 100 TRIỆU ĐỒNG - TẶNG PHỤ KIỆN + BẢO HIỂM (liên hệ 0943.533.613 để đượctư vấn chi tiết)🎉
+   <marquee scrollamount="5" style="color:red; font-weight:bold;">
+  🎉 KHUYẾN MÃI: CHỈ TRONG THÁNG 4/2026 GIẢM GIÁ LÊN ĐẾN 170 TRIỆU ĐỒNG - TẶNG PHỤ KIỆN + BẢO HIỂM (liên hệ 0943.533.613 để đượctư vấn chi tiết)🎉
 </marquee>
 
   </div>
@@ -593,21 +696,24 @@ min-width: 140px;
     <thead>
 <tr>
         <th>Phiên bản</th>
-        <th>Giá xe</th>
+	  <th>Giá xe</th>
+        	  <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Giá xe Hyundai Grand i10 Sedan MT Tiêu chuẩn</td>
+        <td>Hyundai Grand i10 Sedan MT TC</td>
         <td style="text-align:right;">380,000,000&nbsp;VND</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Grand i10 Sedan AT Tiêu chuẩn</td>
+        <td>Hyundai Grand i10 Sedan AT TC</td>
         <td style="text-align:right;">425,000,000&nbsp;VND</td>
+	
       </tr>
       <tr>
-        <td>Giá xe Hyundai Grand i10 Sedan AT</td>
+        <td>Hyundai Grand i10 Sedan AT</td>
         <td style="text-align:right;">455,000,000&nbsp;VND</td>
+	 <td class="km">25,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -633,20 +739,22 @@ min-width: 140px;
       <tr>
         <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Hyundai Grand i10 1.2 MT Tiêu chuẩn</td>
+        <td>Hyundai Grand i10 1.2 MT TC</td>
         <td style="text-align:right;">360,000,000&nbsp;VND</td>
       </tr>
       <tr>
-        <td>Hyundai Grand i10 1.2 AT Tiêu chuẩn</td>
+        <td>Hyundai Grand i10 1.2 AT TC</td>
         <td style="text-align:right;">405,000,000&nbsp;VND</td>
       </tr>
       <tr>
         <td>Hyundai Grand i10 1.2 AT</td>
         <td style="text-align:right;">435,000,000&nbsp;VND</td>
+	 <td>10,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -668,26 +776,31 @@ min-width: 140px;
   <table border="1" style="border-collapse: collapse; width:100%;">
     <thead>
       <tr>
-        <th>Phiên bản</th>
+       <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Giá xe Hyundai Accent 1.5 MT Tiêu chuẩn</td>
+        <td>Hyundai Accent 1.5 MT TC</td>
         <td style="text-align:right;">439,000,000&nbsp;VND</td>
+	<td>20,000,000</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Accent 1.5 AT</td>
+        <td>Hyundai Accent 1.5 AT</td>
         <td style="text-align:right;">489,000,000&nbsp;VND</td>
+	<td>21,000,000</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Accent 1.5 AT Đặc biệt</td>
+        <td>Hyundai Accent 1.5 AT Đặc biệt</td>
         <td style="text-align:right;">529,000,000&nbsp;VND</td>
+	<td>27,000,000</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Accent 1.5 AT Cao cấp</td>
+        <td>Hyundai Accent 1.5 AT Cao cấp</td>
         <td style="text-align:right;">569,000,000&nbsp;VND</td>
+	<td>23,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -709,26 +822,31 @@ min-width: 140px;
   <table border="1" style="border-collapse: collapse; width:100%;">
     <thead>
       <tr>
-        <th>Phiên bản</th>
+       <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Creta 1.5L Tiêu chuẩn</td>
+        <td>Creta 1.5L TC</td>
         <td style="text-align:right;">599,000,000&nbsp;VND</td>
+	<td>22,000,000</td>
       </tr>
       <tr>
         <td>Creta 1.5L Đặc biệt</td>
         <td style="text-align:right;">659,000,000&nbsp;VND</td>
+	<td>24,000,000</td>
       </tr>
       <tr>
         <td>Creta 1.5L Cao cấp</td>
         <td style="text-align:right;">705,000,000&nbsp;VND</td>
+	<td>25,000,000</td>
       </tr>
       <tr>
         <td>Creta N Line</td>
         <td style="text-align:right;">715,000,000&nbsp;VND</td>
+	<td>25,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -754,16 +872,19 @@ min-width: 140px;
       <tr>
         <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Hyundai Venue 1.0 T-GDi</td>
         <td style="text-align:right;">539,000,000&nbsp;VND</td>
+	<td>10,000,000</td>
       </tr>
       <tr>
         <td>Hyundai Venue 1.0 T-GDi Đặc biệt</td>
         <td style="text-align:right;">579,000,000&nbsp;VND</td>
+	<td>12,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -788,30 +909,36 @@ min-width: 140px;
   <table border="1" style="border-collapse: collapse;">
     <thead>
       <tr>
-        <th>Phiên bản</th>
+       <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>New Tucson 2.0 Xăng Tiêu Chuẩn</td>
+        <td>New Tucson 2.0 Xăng TC</td>
         <td>769,000,000&nbsp;VND</td>
+	<td>26,000,000</td>
       </tr>
       <tr>
-        <td>New Tucson 2.0 Xăng Đặc Biệt</td>
+        <td>New Tucson 2.0 Xăng ĐB</td>
         <td>859,000,000&nbsp;VND</td>
+	<td>28,000,000</td>
       </tr>
 <tr>
-        <td>New Tucson 2.0 Dầu Đặc Biệt</td>
+        <td>New Tucson 2.0 Dầu ĐB</td>
         <td>989,000,000&nbsp;VND</td>
+	
       </tr>
       <tr>
         <td>New Tucson 1.6 Turbo</td>
         <td>979,000,000&nbsp;VND</td>
+	<td>32,000,000</td>
       </tr>
       <tr>
         <td>New Tucson N-line</td>
         <td>989,000,000&nbsp;VND</td>
+	<td>31,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -838,30 +965,36 @@ min-width: 140px;
   <table border="1" style="border-collapse: collapse; width:100%;">
     <thead>
       <tr>
-        <th>Phiên bản</th>
+         <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>All New Santa Fe Exclusive</td>
         <td style="text-align:right;">1,069,000,000&nbsp;VND</td>
+	
       </tr>
       <tr>
         <td>All New Santa Fe Prestige</td>
         <td style="text-align:right;">1,265,000,000&nbsp;VND</td>
+	<td>170,000,000</td>
       </tr>
       <tr>
-        <td>All New Santa Fe Calligraphy 7 chỗ</td>
+        <td>All New Santa Fe Calligraphy7c</td>
         <td style="text-align:right;">1,315,000,000&nbsp;VND</td>
+	<td>170,000,000</td>
       </tr>
       <tr>
-        <td>All New Santa Fe Calligraphy 6 chỗ</td>
+        <td>All New Santa Fe Calligraphy6c</td>
         <td style="text-align:right;">1,335,000,000&nbsp;VND</td>
+	
       </tr>
       <tr>
         <td>All New Santa Fe Calligraphy Turbo</td>
         <td style="text-align:right;">1,365,000,000&nbsp;VND</td>
+	<td>170,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -884,26 +1017,31 @@ min-width: 140px;
   <table border="1" style="border-collapse: collapse; width:100%;">
     <thead>
       <tr>
-        <th>Phiên bản</th>
+       <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Giá xe Hyundai Palisade Exclusive 7 chỗ</td>
+        <td>Palisade Exclusive 7 chỗ</td>
         <td style="text-align:right;">1,469,000,000&nbsp;VND</td>
+	<td></td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Palisade Exclusive 6 chỗ</td>
+        <td>Palisade Exclusive 6 chỗ</td>
         <td style="text-align:right;">1,479,000,000&nbsp;VND</td>
+	<td></td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Palisade Prestige 7 chỗ</td>
+        <td>Palisade Prestige 7 chỗ</td>
         <td style="text-align:right;">1,559,000,000&nbsp;VND</td>
+	<td>40,000,000</td>
       </tr>
       <tr>
-<td>Giá xe Hyundai Palisade Prestige 6 chỗ</td>
+<td>Palisade Prestige 6 chỗ</td>
         <td style="text-align:right;">1,589,000,000&nbsp;VND</td>
+	<td>40,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -927,18 +1065,26 @@ min-width: 140px;
   <table border="1" style="border-collapse: collapse; width:100%;">
     <thead>
       <tr>
-        <th>Phiên bản</th>
+         <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
+	 <tr>
+        <td>Hyundai Stargazer TC</td>
+        <td style="text-align:right;">489,000,000&nbsp;VND</td>
+	<td>19,000,000</td>
+      </tr>
       <tr>
         <td>Hyundai Stargazer Đặc biệt</td>
         <td style="text-align:right;">569,000,000&nbsp;VND</td>
+	<td>21,000,000</td>
       </tr>
       <tr>
         <td>Hyundai Stargazer Cao cấp</td>
         <td style="text-align:right;">615,000,000&nbsp;VND</td>
+	<td>22,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -963,20 +1109,24 @@ min-width: 140px;
       <tr>
         <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Giá xe Hyundai Custin 1.5T-GDi Tiêu chuẩn</td>
-        <td style="text-align:right;">850,000,000&nbsp;VND</td>
+        <td>Hyundai Custin 1.5T-GDi TC</td>
+        <td style="text-align:right;">820,000,000&nbsp;VND</td>
+	<td>21,000,000</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Custin 1.5T-GDi Đặc biệt</td>
-        <td style="text-align:right;">945,000,000&nbsp;VND</td>
+        <td>Custin 1.5T-GDi Đặc biệt</td>
+        <td style="text-align:right;">915,000,000&nbsp;VND</td>
+	<td>24,000,000</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Custin 2.0T-GDi Cao cấp</td>
-        <td style="text-align:right;">999,000,000&nbsp;VND</td>
+        <td>Custin 2.0T-GDi Cao cấp</td>
+        <td style="text-align:right;">950,000,000&nbsp;VND</td>
+	<td>25,000,000</td>
       </tr>
     </tbody>
   </table>
@@ -1003,23 +1153,24 @@ min-width: 140px;
       <tr>
         <th>Phiên bản</th>
         <th>Giá xe</th>
+	 <th>Khuyến mãi</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Giá xe Hyundai Elantra 1.6 AT Tiêu chuẩn</td>
+        <td>Hyundai Elantra 1.6 AT TC</td>
         <td style="text-align:right;">599,000,000&nbsp;VND</td>
 </tr>
       <tr>
-        <td>Giá xe Hyundai Elantra 1.6 AT</td>
+        <td>Hyundai Elantra 1.6 AT</td>
         <td style="text-align:right;">669,000,000&nbsp;VND</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Elantra 2.0 AT</td>
+        <td>Hyundai Elantra 2.0 AT</td>
         <td style="text-align:right;">729,000,000&nbsp;VND</td>
       </tr>
       <tr>
-        <td>Giá xe Hyundai Elantra N Line</td>
+        <td>Hyundai Elantra N Line</td>
         <td style="text-align:right;">799,000,000&nbsp;VND</td>
       </tr>
     </tbody>
