@@ -1,10 +1,8 @@
-s<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <style>
-
-
-
 
 
 .topbar{
@@ -531,24 +529,40 @@ min-width: 140px;
 }
 
 
-/* DÁN CSS bạn copy vào đây */
-
 @media (max-width: 768px) {
-    .hero-banner {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
 
-    #bannerTitle {
-        font-size: 28px !important;
-        text-align: center;
-    }
+  .hero-banner,
+  .slide {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 
-    #bannerImg {
-        width: 90% !important;
-        margin: auto;
-    }
+  /* ẢNH lên trên */
+  .slide-right,
+  .hero-right {
+    order: 1 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* CHỮ xuống dưới */
+  .slide-left,
+  .hero-left,
+  .hero-text {
+    order: 2 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Ảnh đẹp hơn mobile */
+  #bannerImg,
+  .hero-right img {
+    width: 95% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
 }
 
 
