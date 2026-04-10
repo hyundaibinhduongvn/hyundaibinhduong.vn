@@ -552,13 +552,18 @@ min-width: 140px;
   text-align: center;
 }
 
- .promo-text marquee {
-        font-size: 20px !important;
-        scroll-behavior: smooth;
-	color:3dc2626!!important;
-	font-weight:bold;
-    }
-
+ promo-text marquee {
+  font-size: 18px !important;   /* vừa mắt mobile */
+  color: red !important;        /* màu khuyến mãi */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .promo-text marquee {
+    font-size: 16px !important;
+  }
+}
 
 
 
@@ -661,7 +666,7 @@ min-width: 140px;
 
   <!-- CHỮ CHẠY -->
   <div class="promo-text">
-   <marquee scrollamount="4" style="color:red; font-weight:bold;">
+   <marquee scrollamount="2" style="color:red; font-weight:bold;">
   🎉 KHUYẾN MÃI: TỪ NGÀY 11/4/2026 (đến khi có thông báo mới) GIẢM GIÁ LÊN ĐẾN 170 TRIỆU ĐỒNG + QUÀ TẶNG + BẢO HIỂM (liên hệ 0943.533.613 để đượctư vấn chi tiết)🎉
 </marquee>
 
