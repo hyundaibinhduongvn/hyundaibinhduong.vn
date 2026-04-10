@@ -470,7 +470,81 @@ min-width: 140px;
 
 }
 
+/* ===== FIX BANNER MOBILE CHUẨN ===== */
+@media screen and (max-width: 768px) {
 
+  .hero-banner {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 20px 14px 24px !important;
+    gap: 14px !important;
+    overflow: visible !important;
+  }
+
+  /* nếu text đang đứng trước trong HTML thì cho text xuống dưới */
+  .hero-text,
+  .hero-left,
+  .slide-left {
+    width: 100% !important;
+    max-width: 100% !important;
+    order: 2 !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  /* khối ảnh lên trên */
+  .hero-right,
+  .slide-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    order: 1 !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  /* nếu ảnh là img trực tiếp trong hero-banner */
+  .hero-banner > img,
+  #bannerImg,
+  .hero-right img,
+  .slide-right img {
+    display: block !important;
+    width: 92% !important;
+    max-width: 92% !important;
+    height: auto !important;
+    max-height: 240px !important;
+    object-fit: contain !important;
+    margin: 0 auto 10px !important;
+  }
+
+  #bannerTitle,
+  .hero-text h1,
+  .hero-left h1,
+  .slide-left h1 {
+    font-size: 26px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 10px !important;
+    text-align: center !important;
+  }
+
+  #bannerDesc,
+  .hero-text p,
+  .hero-left p,
+  .slide-left p {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+}
 
 </style>
 
